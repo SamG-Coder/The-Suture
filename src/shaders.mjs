@@ -5,10 +5,10 @@ float loopDistance(float a, float b) {
 }
 
 float travellingPulse(float along, float age) {
-  float active = 1.0 - step(6.0, age);
+  float activeS = 1.0 - step(6.0, age);
   float head = clamp(age / 6.0, 0.0, 1.0);
   float distanceValue = loopDistance(fract(along), head);
-  return exp(-distanceValue * distanceValue * 1450.0) * active;
+  return exp(-distanceValue * distanceValue * 1450.0) * activeS;
 }
 `;
 
