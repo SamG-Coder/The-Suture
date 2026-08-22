@@ -32,6 +32,8 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.02;
 
+document.body.appendChild(renderer.domElement);
+
 const scene = new THREE.Scene();
 scene.background = palette.void.clone();
 
